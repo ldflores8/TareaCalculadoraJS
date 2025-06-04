@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Básica</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body
+    class="bg-light d-flex justify-content-center align-items-center vh-100"
+  >
+    <div class="container" style="max-width: 400px">
+      <div class="calculator bg-white shadow rounded p-4">
+        <h4 class="text-center mb-4 fw-bold text-primary">Calculadora</h4>
+
+        <div id="operationDisplay" class="text-end text-muted small mb-1"></div>
+        <input
+          type="text"
+          id="display"
+          class="form-control form-control-lg text-end mb-3 border-primary"
+          disabled
+        />
+
+        <div class="row g-2 mb-2">
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('1')"
+            >
+              1
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('2')"
+            >
+              2
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('3')"
+            >
+              3
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-warning w-100 py-2"
+              onclick="chooseOperation('*')"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-2 mb-2">
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('4')"
+            >
+              4
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('5')"
+            >
+              5
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('6')"
+            >
+              6
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-warning w-100 py-2"
+              onclick="chooseOperation('-')"
+            >
+              −
+            </button>
+          </div>
+        </div>
+        <div class="row g-2 mb-2">
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('7')"
+            >
+              7
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('8')"
+            >
+              8
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('9')"
+            >
+              9
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-warning w-100 py-2"
+              onclick="chooseOperation('+')"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-2 mb-3">
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('.')"
+            >
+              .
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-secondary w-100 py-2"
+              onclick="appendNumber('0')"
+            >
+              0
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-success w-100 py-2"
+              onclick="calculate()"
+            >
+              =
+            </button>
+          </div>
+          <div class="col-3">
+            <button
+              class="btn btn-outline-warning w-100 py-2"
+              onclick="chooseOperation('/')"
+            >
+              ÷
+            </button>
+          </div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-12">
+            <button
+              class="btn btn-outline-danger w-100 py-2"
+              onclick="clearCalculator()"
+            >
+              C
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="java.js"></script>
+  </body>
+</html>
