@@ -1,7 +1,13 @@
+// En este archivo se configuró la lógica del funcionamiento de la calculadora. Se define 
+// lo que es la agregación de números, se seleccionan operaciones, se realiza el cálculo 
+// y se limpia la calculadora.
+
+// Estas variables guardan los números ingresados y la operación seleccionada.
 let primer_numero = null;
 let segundo_numero = null;
 let operacion = null;
 
+// Obtiene elementos del HTML para mostrar los valores ingresados y la operación activa.
 const display = document.getElementById('display');
 const operationDisplay = document.getElementById('operationDisplay');
 

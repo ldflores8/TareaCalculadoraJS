@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Básica</title>
 
+    <!-- Configuración básica del documento, como (UTF-8), configuración para que sea responsivo, 
+     el título de la página y enlaces a estilos externos Bootstrap 5.-->
     <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -18,10 +20,17 @@
   <body
     class="bg-light d-flex justify-content-center align-items-center vh-100"
   >
+
+    <!-- En el body encontramos el cuerpo visible de la página, con clases de Bootstrap para centrar 
+     el contenido vertical y horizontalmente.-->
     <div class="container" style="max-width: 400px">
+      <!-- Aquí se encuentra el contenedor principal de la calculadora, con un fondo blanco, 
+       sombra y bordes redondeados. -->
       <div class="bg-white shadow rounded p-4">
         <h4 class="text-center mb-4 fw-bold text-primary">Calculadora</h4>
 
+        <!-- Este div muestra la operación actual, con un texto alineado a la derecha 
+         y en un tamaño pequeño. -->
         <div id="operationDisplay" class="text-end text-muted small mb-1"></div>
         <input
           type="text"
@@ -32,6 +41,10 @@
 
         <div class="row g-2 mb-2">
           <div class="col-3">
+            <!-- Botones numéricos y operadores rrganizados en filas 
+             (<div class="row">) y columnas (<div class="col-3">), cada 
+              botón usa clases de Bootstrap para estilo y tamaño, con eventos 
+              onclick.-->
             <button
               class="btn btn-outline-secondary w-100 py-2"
               onclick="appendNumber('1')"
@@ -171,6 +184,8 @@
 
         <div class="row g-2">
           <div class="col-12">
+            <!-- Botón para borrar la operación actual, con un evento onclick que 
+             llama a la función clearCalculator(). -->
             <button
               class="btn btn-outline-danger w-100 py-2"
               onclick="clearCalculator()"
@@ -183,5 +198,6 @@
     </div>
 
     <script src="java.js"></script>
+    <!-- Enlazamos el archivo JavaScript que contiene la lógica de la calculadora.-->
   </body>
 </html>
